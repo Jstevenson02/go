@@ -1,31 +1,50 @@
 package main
 
-import "fmt"
-
 func main() {
+
+	// Strings, Runes and Bytes
+
+	// var myString = []rune("résumé")
+	// var indexed = myString[1]
+	// fmt.Printf("%v, %T\n", indexed, indexed)
+	// for i, v := range myString {
+	// 	fmt.Println(i, v)
+	// }
+	// fmt.Printf("\nThe length of 'myString' is %v", len(myString))
+
+	// var myRune = 'a'
+	// fmt.Printf("\nmyRune = %v", myRune)
+
+	// var strSlice = []string{"s", "u", "b", "s", "c", "r", "i", "b", "e"}
+	// var strBuilder strings.Builder
+	// for i := range strSlice {
+	// 	strBuilder.WriteString(strSlice[i])
+	// }
+	// var catStr = strBuilder.String()
+	// fmt.Printf("\n%v", catStr)
 
 	// Arrays, Slices, Maps, Loops
 
-	intArr := [...]int32{1, 2, 3}
-	fmt.Println(intArr)
+	// intArr := [...]int32{1, 2, 3}
+	// fmt.Println(intArr)
 
-	var myMap map[string]uint8 = make(map[string]uint8)
-	fmt.Printf("My Map:%v", myMap)
+	// var myMap map[string]uint8 = make(map[string]uint8)
+	// fmt.Printf("My Map:%v", myMap)
 
-	var myMap2 = map[string]uint8{"Adam": 23, "Sarah": 26}
-	fmt.Println(myMap2["Adam"])
-	var age, ok = myMap2["John"]
+	// var myMap2 = map[string]uint8{"Adam": 23, "Sarah": 26}
+	// fmt.Println(myMap2["Adam"])
+	// var age, ok = myMap2["John"]
 
-	if ok {
-		fmt.Printf("The age is %v", age)
+	// if ok {
+	// 	fmt.Printf("The age is %v", age)
 
-	} else {
-		fmt.Println("Invalid Name")
-	}
+	// } else {
+	// 	fmt.Println("Invalid Name")
+	// }
 
-	for name, age := range myMap2 {
-		fmt.Printf("Name: %v, Age:%v \n", name, age)
-	}
+	// for name, age := range myMap2 {
+	// 	fmt.Printf("Name: %v, Age:%v \n", name, age)
+	// }
 
 	// Variables and Basic Types
 
