@@ -14,7 +14,6 @@ import (
 	_ "github.com/lib/pq"
 )
 
-
 type apiConfig struct {
 	DB *database.Queries
 }
@@ -57,6 +56,7 @@ func main() {
 	v1Router.Get("/healthz", handlerReadiness)
 	v1Router.Get("/err", handleErr)
 	v1Router.Post("/users", apiCfg.handlerCreateUser)
+	v1Router.Get("/users", apiCfg.handlerGetUser)
 
 	router.Mount("/v1", v1Router)
 
