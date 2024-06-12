@@ -31,5 +31,24 @@ type Feed struct {
 	UpdatedAt time.Time `json:"updated_at"`
 	Name      string    `json:"name"`
 	Url       string    `json:"url"`
-	APIKey    string    `json:"api_key"`
+	UserID    uuid.UUID `json:"user_id"`
+}
+
+func databaseFeedToFeed(dbFeed database.Feed) Feed {
+	return Feed{
+		ID:        dbFeed.ID,
+		CreatedAt: dbFeed.CreatedAt,
+		UpdatedAt: dbFeed.UpdatedAt,
+		Name:      dbFeed.Name,
+		Url:       dbFeed.Url,
+		UserID:    dbFeed.UserID,
+	}
+}
+
+func databaseFeedstoFeeds(dbFeed []database.Feed) []Feed {
+	feeds := []Feed{}
+	for _, dbFeed := range dbFeed {
+		feeds = append(feeds, databaseFeedToFeed(dbFeed))
+	}
+	return feeds
 }
